@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800|Exo:100,300,400,500,700,800");
+
+/* Colors */
+
+.bg-color {
+	&-name-title {
+		background-color: #212121;
+	}
+	&-three-reasons {
+		background-color: #fff;
+	}
+	&-personal-info {
+		background-color: #f4f4f4;
+	}
+	&-work-history {
+		background-color: #9b59b6;
+	}
+	&-contact {
+		background-color: #fff;
+	}
+}
+.ui-menu-color {
+	&-home {
+		background-color: #e67e22;
+	}
+	&-resume {
+		background-color: #9b59b6;
+	}
+	&-contact {
+		background-color: #3498db;
+	}
+	&-download {
+		background-color: #525252;
+	}
+}
+
+/* Heading Styles */
+
+header {
+	margin: 0;
+	.heading {
+		margin-left: 50px;
+	}
+	.logo {
+		background: url("../img/profile.jpg") center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: all 0.5 ease-out;
+		min-height: 360px;
+	}
+	.name {
+		font-family: "Exo", sans-serif;
+		font-weight: 100;
+		font-size: 46px;
+		margin-top: 50px;
+		color: #fff;
+	}
+	.title {
+		font-family: "Roboto", sans-serif;
+		font-weight: 300;
+		font-size: 28px;
+		margin-top: 20px;
+		margin-bottom: 90px;
+		color: #fff;
+	}
+	#nav {
+		margin: 0;
+	}
+
+	#nav li {
+		padding: 0;
+	}
+	.menu-item {
+		height: 120px;
+		text-align: center;
+		padding: 0;
+	}
+
+	.menu-item a {
+		width: 100%;
+		text-decoration: none;
+		color: #fff;
+		height: 120px;
+	}
+
+	.menu-item a i {
+		padding-top: 22px;
+		display: block;
+		color: #fafafa;
+		font-size: 26px;
+	}
+
+	.menu-item span {
+		display: block;
+		width: 100%;
+		padding-top: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 300px;
+		letter-spacing: 2px;
+	}
+}
