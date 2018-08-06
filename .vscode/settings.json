@@ -12,6 +12,7 @@
 		{
 			"format": "compressed",
 			"extensionName": ".min.css",
+			"savePath": "/assets/css"
 		}
 	]
 }

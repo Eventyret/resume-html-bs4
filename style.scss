@@ -1,6 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800|Exo:100,300,400,500,700,800");
 
-/* Colors */
+/* General Styles */
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+
+	& h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+	}
+	.uppercase {
+		text-transform: uppercase;
+	}
+
+	.general-sub {
+		font-family: "Exo", sans-serif;
+		font-weight: 300;
+		color: #fafafa;
+	}
+
+	.inline-block {
+		display: inline-block;
+	}
+}
+
+/*--------------------------------- Colors --------------------------------- */
 
 .bg-color {
 	&-name-title {
@@ -33,21 +60,25 @@
 		background-color: #525252;
 	}
 }
-
-/* Heading Styles */
-
+/*--------------------------------- Heading --------------------------------- */
 header {
 	margin: 0;
+
 	.heading {
 		margin-left: 50px;
 	}
+
 	.logo {
-		background: url("../img/profile.jpg") center;
+		background: url("../img/profile.jpg");
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		transition: all 0.5 ease-out;
 		min-height: 360px;
+		transition: all 0.5 ease-out;
+		-moz-transition: all 0.5 ease-out;
+		-webkit-transition: all 0.5 ease-out;
 	}
+
 	.name {
 		font-family: "Exo", sans-serif;
 		font-weight: 100;
@@ -63,41 +94,142 @@ header {
 		margin-bottom: 90px;
 		color: #fff;
 	}
+
 	#nav {
 		margin: 0;
-	}
-
-	#nav li {
-		padding: 0;
-	}
-	.menu-item {
-		height: 120px;
-		text-align: center;
-		padding: 0;
-	}
-
-	.menu-item a {
 		width: 100%;
-		text-decoration: none;
-		color: #fff;
 		height: 120px;
+		& i {
+			padding-top: 22px;
+			display: block;
+			color: #fafafa;
+			font-size: 26px;
+		}
+		span {
+			display: block;
+			width: 100%;
+			padding-top: 5px;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 300px;
+			letter-spacing: 2px;
+		}
+		/* Hover.css effect */
+		.hvr-sweep-to-bottom:before {
+			background: rgba(33, 33, 33, 0.2);
+			height: 120px;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* ------------------- Special Padding / Margin / Text -------------------- */
+
+.history-heading,
+.section-heading {
+	font-family: "Exo", sans-serif;
+	font-weight: 300;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+/* ------------------- Footer -------------------- */
+
+footer {
+	background-color: #212121;
+	color: #fafafa;
+	min-height: 120px;
+	margin: 0px;
+	.cv-pdf {
+		i {
+			color: #fafafa;
+			text-align: center;
+			font-size: 18px;
+			padding-left: 5px;
+			&:hover {
+				color: #e84610;
+				transition: all 0.35s ease-in-out;
+			}
+		}
 	}
 
-	.menu-item a i {
-		padding-top: 22px;
-		display: block;
-		color: #fafafa;
-		font-size: 26px;
+	#footer-details {
+		margin-top: 15px;
+		padding: 28px;
 	}
 
-	.menu-item span {
-		display: block;
-		width: 100%;
-		padding-top: 5px;
-		text-align: center;
-		text-transform: uppercase;
-		font-size: 14px;
-		font-weight: 300px;
-		letter-spacing: 2px;
+	.social-links {
+		padding-bottom: 15px;
+		li a i {
+			width: 32px;
+			height: 32px;
+			padding: 12px 0;
+			border-radius: 50%;
+			font-size: 13px;
+			line-height: 7px;
+			text-align: center;
+			color: #fafafa;
+			background: #8f8f8f;
+			transition: all 0.35s ease-in-out;
+			&:hover {
+				background: #e84610;
+			}
+		}
+	}
+}
+
+/* ------------------- Three reasons why -------------------- */
+
+.three-reasons-icon {
+	font-size: 26px;
+	color: #e67e22;
+}
+.three-reasons-heading {
+	margin-bottom: 15px;
+}
+
+/* ------------------- Personal Info-------------------- */
+
+.personal-info-item {
+	margin-bottom: 20px;
+	display: block;
+	clear: both;
+	&.key,
+	&.value {
+		padding-right: 8px;
+		p {
+			margin: 0;
+		}
+	}
+	&.key {
+		display: inline-block;
+		width: 30%;
+		margin-right: 21px;
+		padding-top: 2px;
+		vertical-align: top;
+		p {
+			font-weight: 700;
+		}
+	}
+	&value {
+		display: inline-block;
+		position: relative;
+		width: 60%;
+	}
+}
+
+/* ------------------- Media Queries-------------------- */
+
+@media (min-width: 992px) {
+	.center-form {
+		padding-top: 30px;
+		min-width: 240px;
+		margin: 0 auto;
+		max-width: 50%;
 	}
 }

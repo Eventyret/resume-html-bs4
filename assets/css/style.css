@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800|Exo:100,300,400,500,700,800");
-/* Colors */
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body h1,
+body h2,
+body h3,
+body h4 {
+  margin: 0;
+}
+
+body .uppercase {
+  text-transform: uppercase;
+}
+
+body .general-sub {
+  font-family: "Exo", sans-serif;
+  font-weight: 300;
+  color: #fafafa;
+}
+
+body .inline-block {
+  display: inline-block;
+}
+
+/*--------------------------------- Colors --------------------------------- */
 .bg-color-name-title {
   background-color: #212121;
 }
@@ -36,7 +64,7 @@
   background-color: #525252;
 }
 
-/* Heading Styles */
+/*--------------------------------- Heading --------------------------------- */
 header {
   margin: 0;
 }
@@ -46,12 +74,14 @@ header .heading {
 }
 
 header .logo {
-  background: url("../img/profile.jpg") center;
+  background: url("../img/profile.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transition: all 0.5 ease-out;
-  transition: all 0.5 ease-out;
   min-height: 360px;
+  transition: all 0.5 ease-out;
+  -moz-transition: all 0.5 ease-out;
+  -webkit-transition: all 0.5 ease-out;
 }
 
 header .name {
@@ -73,33 +103,19 @@ header .title {
 
 header #nav {
   margin: 0;
-}
-
-header #nav li {
-  padding: 0;
-}
-
-header .menu-item {
-  height: 120px;
-  text-align: center;
-  padding: 0;
-}
-
-header .menu-item a {
   width: 100%;
-  text-decoration: none;
-  color: #fff;
   height: 120px;
+  /* Hover.css effect */
 }
 
-header .menu-item a i {
+header #nav i {
   padding-top: 22px;
   display: block;
   color: #fafafa;
   font-size: 26px;
 }
 
-header .menu-item span {
+header #nav span {
   display: block;
   width: 100%;
   padding-top: 5px;
@@ -108,4 +124,127 @@ header .menu-item span {
   font-size: 14px;
   font-weight: 300px;
   letter-spacing: 2px;
+}
+
+header #nav .hvr-sweep-to-bottom:before {
+  background: rgba(33, 33, 33, 0.2);
+  height: 120px;
+}
+
+header #nav a {
+  text-decoration: none;
+}
+
+header #nav a:hover {
+  text-decoration: none;
+}
+
+/* ------------------- Special Padding / Margin / Text -------------------- */
+.history-heading,
+.section-heading {
+  font-family: "Exo", sans-serif;
+  font-weight: 300;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* ------------------- Footer -------------------- */
+footer {
+  background-color: #212121;
+  color: #fafafa;
+  min-height: 120px;
+  margin: 0px;
+}
+
+footer .cv-pdf i {
+  color: #fafafa;
+  text-align: center;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+footer .cv-pdf i:hover {
+  color: #e84610;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+footer #footer-details {
+  margin-top: 15px;
+  padding: 28px;
+}
+
+footer .social-links {
+  padding-bottom: 15px;
+}
+
+footer .social-links li a i {
+  width: 32px;
+  height: 32px;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: #8f8f8f;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+footer .social-links li a i:hover {
+  background: #e84610;
+}
+
+/* ------------------- Three reasons why -------------------- */
+.three-reasons-icon {
+  font-size: 26px;
+  color: #e67e22;
+}
+
+.three-reasons-heading {
+  margin-bottom: 15px;
+}
+
+/* ------------------- Personal Info-------------------- */
+.personal-info-item {
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+}
+
+.personal-info-item.key, .personal-info-item.value {
+  padding-right: 8px;
+}
+
+.personal-info-item.key p, .personal-info-item.value p {
+  margin: 0;
+}
+
+.personal-info-item.key {
+  display: inline-block;
+  width: 30%;
+  margin-right: 21px;
+  padding-top: 2px;
+  vertical-align: top;
+}
+
+.personal-info-item.key p {
+  font-weight: 700;
+}
+
+.personal-info-itemvalue {
+  display: inline-block;
+  position: relative;
+  width: 60%;
+}
+
+/* ------------------- Media Queries-------------------- */
+@media (min-width: 992px) {
+  .center-form {
+    padding-top: 30px;
+    min-width: 240px;
+    margin: 0 auto;
+    max-width: 50%;
+  }
 }
